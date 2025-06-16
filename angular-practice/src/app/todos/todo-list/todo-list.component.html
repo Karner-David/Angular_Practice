@@ -1,0 +1,12 @@
+<div class="todos">
+    <h2>Todos</h2>
+    <ul>
+        <li>
+            <input type="text" #inputTodoText>
+            <button (click)="onAddTodo(inputTodoText.value)">Add Todo</button>
+        </li>
+        @for (item of todos; track $index) {
+            <app-todo-list-item [title]="item.title"></app-todo-list-item>
+        }
+    </ul>
+</div>

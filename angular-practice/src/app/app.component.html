@@ -1,0 +1,19 @@
+@if (environment === 'dev') {
+    <div style="background: yellow;">
+        This is Development Environment
+    </div>
+} @else if (environment === 'test') {
+    <div style="background: green;">
+        This is Test Environment
+    </div>
+} @else {
+    <div style="background: blue;">
+        This is Prod Environment
+    </div>
+}
+
+
+<app-todo-list></app-todo-list>
+<input type="text" (keyup)="onKeyUp($event)">
+<p>{{ message() }}</p>
+<router-outlet />
